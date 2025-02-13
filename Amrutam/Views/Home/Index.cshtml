@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अमृतम</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: #00AEEF;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: inline-block;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 200px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .footer {
+            background-color: #E6F7FF; /* Light Blue */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            flex-wrap: wrap;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+            .footer-left img {
+                width: 180px; /* Make logo bigger */
+            }
+
+        .footer-text {
+            flex: 2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+            .footer-text h2 {
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
+
+        .footer-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+            .footer-icons span {
+                font-size: 20px;
+            }
+
+        /* Responsive for small screens */
+        @@media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-left {
+                margin-bottom: 15px;
+            }
+        }
+
+        @@media (max-width: 600px) {
+            nav a {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .about-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+            .about-row.reverse {
+                flex-direction: row-reverse;
+            }
+
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            max-width: 500px;
+            padding: 20px;
+            text-align: left;
+        }
+
+            .about-text h2 {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+
+            .about-text p {
+                font-size: 15px;
+                color: #555;
+                line-height: 1.6;
+            }
+
+        @@media (max-width: 768px) {
+            .about-row {
+                flex-direction: column;
+                text-align: center;
+            }
+
+                .about-row.reverse {
+                    flex-direction: column;
+                }
+
+            .about-text {
+                text-align: center;
+            }
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contact Section */
+        #contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #00AEEF;
+        }
+
+        .contact-form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: .5rem;
+            }
+
+            .form-group input, .form-group textarea {
+                width: 100%;
+                padding: .5rem;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: .5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        @@media (max-width: 600px) {
+            .contact-form-section
+
+        {
+            margin: 1rem;
+        }
+
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 350px;
+            position: relative;
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: black;
+        }
+
+        .rating {
+            font-size: 16px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .rating-score {
+            background: yellow;
+            color: black;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: black;
+        }
+
+        .product-btn {
+            background-color: #00AEEF;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+            .product-btn:hover {
+                background-color: #0088cc;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #00AEEF;">
+        <div class="w-100 d-flex align-items-center">
+            <!-- Logo (Between Left & Center) -->
+            <a class="navbar-brand fs-3 fw-bold ms-4 me-auto" href="/Home" style="color: white;">अमृतम</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Centered Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link fs-5 text-white" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-white" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-white" href="#product">Product</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 text-white" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <img src="/Picture/gir cow.png" alt="Image" style="width: 100vw; height: 100vh; object-fit: cover;">
+    </section>
+
+    <div style="display: flex; justify-content: center; align-items: center;background-color:#00AEEF;">
+        <div style="width: 50%; background-color:#00AEEF; color:white; text-align:center; padding: 5px; border-radius: 10px;">
+            <h1>Welcome to अमृतम</h1>
+            <p style="color:white">
+                A sanctuary of tradition, purity, and wellness. Our commitment to crafting exceptional A2 Gir Cow Ghee
+                is matched only by our dedication to ethical and sustainable practices. Allow us to take you on a journey
+                that celebrates our story, mission, values, and the remarkable team behind the brand.
+            </p>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="about-section">
+            <div class="about-row">
+                <div class="about-image">
+                    <img src="/Picture/1.png" alt="Our Story">
+                </div>
+                <div class="about-text" style="background-color:#00AEEF;color:white">
+                    <h2 style="text-align:center">Our Story</h2>
+                    <p style="color:white">Amrutam's roots trace back to a profound respect for time-honored dairy practices. A spark of inspiration ignited our founders' desire to share these invaluable benefits with a wider audience. Thus, Gaayam was born, a haven where the qualities of A2 Gir Cow Ghee and the significance of Gir cows merge seamlessly.</p>
+                </div>
+            </div>
+
+            <div class="about-row reverse">
+                <div class="about-text" style="background-color:#00AEEF;color:white">
+                    <h2 style="text-align:center">Our Mission and Values</h2>
+                    <p style="color:white">At Amrutam, our mission is clear: to provide you with the purest A2 Gir Cow Ghee while preserving the essence of traditional dairy practices. Our values are the pillars that guide us: authenticity, quality, tradition, health, sustainability, and community engagement. Every step we take is rooted in these principles, ensuring that the products you experience embody the finest standards and cherished heritage.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/Picture/2.png" alt="Our Mission and Values">
+                </div>
+            </div>
+
+            <div class="about-row">
+                <div class="about-image">
+                    <img src="/Picture/3.png" alt="Our Vision for the Future">
+                </div>
+                <div class="about-text" style="background-color:#00AEEF;color:white">
+                    <h2 style="text-align:center">Our Vision for the Future</h2>
+                    <p style="color:white">Our vision extends far beyond the present. Amrutam aspires to grow, innovate, and make a positive impact on both your well-being and the world around you. We envision expanding our offerings, igniting educational initiatives, and fostering community connections. Together, we're creating a legacy that celebrates tradition while embracing the possibilities of the future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home">
+        <div>
+            
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h4 style="text-align:center">Our Product</h4>
+    <section id="product">
+        <div class="product-container">
+            <div class="product-card">
+                <div class="sale-badge">Sale</div>
+                <img src="~/Picture//Ghee.png" alt="A2 Gir Cow Ghee">
+                <h3>Amrutam A2 Gir Cow Ghee</h3>
+                <p class="rating">⭐⭐⭐⭐⭐ <span class="rating-score">4.8</span> (56)</p>
+                <p class="price"><del>Rs. 1,299.00</del> <strong>From Rs. 1,050.00</strong></p>
+                <button class="product-btn">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-form-section">
+            <h1>Contact Us</h1>
+            <form id="contact-form" action="/submit-form" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="/Picture/Amritam_Logo_New.jpg.png" alt="Logo">
+        </div>
+        <div class="footer-text">
+            <h2>Get it touch</h2>
+            <div class="footer-icons">
+                <span>📍</span>
+                <p>Survey No. 160/5, Rib, Taluka - Gondal, Rajkot ,360311, Gujarat, INDIA</p>
+            </div>
+            <div class="footer-icons">
+                <span>📧</span>
+                <p>gaayamorganics@gmail.com</p>
+            </div>
+            <div class="footer-icons">
+                <span>📞</span>
+                <p>+91 9328 99 44 88</p>
+            </div>
+            <small class="copyright__content">© 2025, <a href="#home" title="">Amrutam</a></small>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
